@@ -5,11 +5,13 @@
     <meta charset="utf-8">
     <title>IF 2014 Agile Development with NodeJS</title><!-- FIXME -->
 
-    <meta name="description" content="Der Inhalt des Vortrags"><!-- FIXME -->
+    <meta name="description" content="Der Inhalt des Vortrags">
+    <!-- FIXME -->
     <meta name="author" content="Franziska Hinkelmann><!-- FIXME -->
 
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name=" apple-mobile-web-app-capable
+    " content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
@@ -23,12 +25,12 @@
 
     <!-- If the query includes 'print-pdf', include the PDF print sheet -->
     <script>
-        if( window.location.search.match( /print-pdf/gi ) ) {
-            var link = document.createElement( 'link' );
+        if (window.location.search.match(/print-pdf/gi)) {
+            var link = document.createElement('link');
             link.rel = 'stylesheet';
             link.type = 'text/css';
             link.href = 'css/print/pdf.css';
-            document.getElementsByTagName( 'head' )[0].appendChild( link );
+            document.getElementsByTagName('head')[0].appendChild(link);
         }
     </script>
 
@@ -51,66 +53,77 @@
 
 <!-- Titel-Slide -->
 <section>
-  <h1>IF 2014 Agile Development with NodeJS</h1>
-  <h3></h3>
-  <p style="padding-top:15%">
-    <a href="mailto:franziska.hinkelmann@tngtech.com">Franziska Hinkelmann</a>,<br>
-    Bremen, August 2014
-  </p>
-  <a href="http://www.tngtech.com"><img class="logo" src="img/tng.svg"></a>
+    <h2>Agile Development with NodeJS</h2>
+
+    <h3>Informatica Feminale 2014</h3>
+
+    <p style="padding-top:15%">
+        <a href="mailto:franziska.hinkelmann@tngtech.com">Franziska Hinkelmann</a>,<br>
+        Bremen, 25. - 29. August 2014
+    </p>
+    <a href="http://www.tngtech.com"><img class="logo" src="img/tng.svg"></a>
 </section>
 
-<!-- Inhalt ab hier, für eigene Präsentationen einfach löschen -->
 <!-- Gibt man data-title="foo" an, wird eine Übersichtseite mit Links hier in die Präsentation eingefügt -->
-  <section>
-      <h1>About Me</h1>
-  </section>
-  <section>
-      <ul>
-         <li>Vordiplom Mathematik University Karlsruhe</li>
-         <li>2011 PhD Mathematics Virginia Tech, USA: Algebraic Models in Systems Biology</li>
-          <li>Postdoctoral Fellow Mathematical Biosciences Institute, Ohio State University, USA</li>
-          <li>since September 2014 Software Consultant at TNG Technology Consulting GmbH, Munich</li>
-          <li>At work: PHP, for fun: NodeJS</li>
-      </ul>
+<section data-title="Introductions">
     <section>
-      <h2>About you</h2>
-      <ul>
-        <li>Where are you from? What is your background? (school, major, job,...)</li>
-        <li>What background do you have in programming and with JavaScript/Node in particular?</li>
-        <li>Why are you interested in this course?</li>
-        <li>What do you hope to learn or accomplish this week?</li>
-      </ul>
-   </section>
+        <h2>About Me</h2>
+        <ul class="no-burn">
+            <li>2006 Vordiplom Mathematik University Karlsruhe</li>
+            <li>2011 PhD Mathematics Virginia Tech, USA: Algebraic Models in Systems Biology</li>
+            <li>Postdoctoral Fellow Mathematical Biosciences Institute, Ohio State University, USA</li>
+            <li>since September 2014 Software Consultant at TNG Technology Consulting GmbH, Munich</li>
+            <li>At work: PHP, for fun: NodeJS</li>
+        </ul>
+    </section>
 
-  <section>
-    <h2>The Course</h2>
+    <section>
+        <h2>About you</h2>
+        <ul class="no-burn">
+            <li>What is your name and where are you from?</li>
+            <li>What is your background? (School, major, job,...)</li>
+            <li>What background do you have in programming and with JavaScript/Node in particular?</li>
+        </ul>
+    </section>
 
-    <ul>
-        <li>JavaScript and NodeJs</li>
-        <li>Git</li>
-        <li>Test Driven Development (TDD)</li>
-        <li>npm</li>
-        <li>Agile development</li>
-        <li></li>
-    </ul>
-  </section>
+    <section>
+        <h2>About you</h2>
+        <ul class="no-burn">
+            <li>What do you expect from this course?</li>
+            <li>Why did you choose this course?</li>
+            <li>What career path do want?</li>
+        </ul>
+    </section>
+</section>
 
-  <section>
-    <h2>Manifesto for Agile Software Development (2001)</h2>
+<section data-title="Overview of the course">
+    <section>
+        <h2>Build a Chat Server with NodeJS</h2>
 
-    <ul>
-        Individuals and interactions over processes and tools<br>
-        Working software over comprehensive documentation<br>
-        Customer collaboration over contract negotiation<br>
-        Responding to change over following a plan<br>
-    </ul>
-  </section>
+        <ul class="no-burn">
+            <li>JavaScript and NodeJs</li>
+            <li>Git</li>
+            <li>Test Driven Development (TDD)</li>
+            <li>npm</li>
+            <li>Agile development</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Manifesto for Agile Software Development (2001)</h2>
+
+        <ul class="no-burn">
+            Individuals and interactions over processes and tools<br>
+            Working software over comprehensive documentation<br>
+            Customer collaboration over contract negotiation<br>
+            Responding to change over following a plan<br>
+        </ul>
+    </section>
 
     <section>
         <h2>Agile practices and tools</h2>
 
-        <ul>
+        <ul class="no-burn">
             <li>Pair programming</li>
             <li>Code Reviews</li>
             <li>TDD</li>
@@ -118,130 +131,90 @@
             <li>Retrospectives</li>
         </ul>
     </section>
-
-    <section>
-    </section>
-
 </section>
 
+<section data-title="First NodeJS Program">
     <section>
-        <h3>Hello World!</h3>
-        Install node <br>
-        Use any editor to write code<br>
-        Save the file as server.js<br>
-        In a terminal or shell, in the same directory as server.js, type <br>
-        node server.js<br>
+        <h2>Hello World!</h2>
+        <ul class="no-burn">
+            <li>Install node, to test your installation, type in a terminal:
+                <pre><code class="terminal">node --version</code></pre>
+            </li>
+            <li>
+                Use any editor to write code
+            </li>
+            <li>Save the file as server.js</li>
+            <li>In a terminal or shell, in the same directory as server.js, type
+                <pre><code class="terminal">node server.js</code></pre>
+            </li>
+        </ul>
     </section>
 </section>
-
-<section data-title="Mob Programming">
-    <section>
-        <h1> Ist bestimmt mindestens genauso awesome</h1>
-    </section>
 </section>
 
 
-<section data-title="Bullet Points">
-    <section>
-    <h1>Bullet Points</h1>
-    <h4 class="fragment">(bitte sparsam verwenden ;-))</h4>
-  </section>
-
-  <section>
-    <h2>Bullet Points</h2>
-    <h3>Standardverhalten</h3>
-    <ul>
-      <li>Standardmäßig...</li>
-      <li>...werden Punkte nach und nach eingeblendet...</li>
-      <li data-fragment-index="4">...die Reihenfolge ist konfigurierbar</li>
-      <li>...wobei alte Elemente verblassen...</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Bullet Points</h2>
-    <h3>(statisch)</h3>
-    <ul class="no-burn">
-      <li>Diese Elemente...</li>
-      <li>...sind immer sichtbar</li>
-    </ul>
-    <hr>
-    <ul>
-      <li class="no-burn">Diese Elemente...</li>
-      <li class="no-burn">...verblassen nie</li>
-      <li class="no-burn">egal wie viele kommen</li>
-      <li class="no-burn">Beides wird über CSS-Klassen gesteuert</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Überblick</h2>
-
-    <p>Alle Sections auf oberster Ebene, <br/>die ein Attribut, "data-title" besitzen:</p>
-    <ul>
-      <li>Erhalten eine Übersichtsseite (wo stehen wir gerade?)</li>
-      <li>Werden mit ihrem Titel auf der Übersichtsseite angezeigt</li>
-    </ul>
-  </section>
-
-  <section>
+<section>
     <h1>Source Code Focus</h1>
-  </section>
+</section>
 
-  <section>
+<section>
     <p>Bei Source-Code Beispielen kann man die Stelle, über die man gerade spricht, fokussieren:</p>
     <pre><code class="java" data-noescape>
-      public ^1^class^^ HelloWorld {
+        public ^1^class^^ HelloWorld {
         public static ^4^void^^ ^2^main^^(^3^String[] args^^) {
-          ^5^System.out.println("Hello World!");^^
+        ^5^System.out.println("Hello World!");^^
         }
-      }</code></pre>
-        </section>
+        }</code></pre>
+</section>
 
-  <section>
+<section>
     <h1>Animationen</h1>
-  </section>
+</section>
 
-  <section>
+<section>
     <h2>Animierte Elemente</h2>
 
     <div class="animated-html" style="height: 600px;">
-      <animation data-duration="500">
-        <animate data-id="box" data-property="opacity" data-value="1"></animate>
-      </animation>
-      <animation data-duration="500">
-        <animate data-id="box" data-property="top" data-value="400px"></animate>
-        <animate data-id="box" data-property="left" data-value="400px"></animate>
-      </animation>
+        <animation data-duration="500">
+            <animate data-id="box" data-property="opacity" data-value="1"></animate>
+        </animation>
+        <animation data-duration="500">
+            <animate data-id="box" data-property="top" data-value="400px"></animate>
+            <animate data-id="box" data-property="left" data-value="400px"></animate>
+        </animation>
 
-      <div id="box" style="position: absolute; left: 200px; top: 200px; width: 400px; border: 1px solid black; opacity: 0;">
-        Dieser Text wird sich bewegen
-      </div>
+        <div id="box"
+             style="position: absolute; left: 200px; top: 200px; width: 400px; border: 1px solid black; opacity: 0;">
+            Dieser Text wird sich bewegen
+        </div>
     </div>
-  </section>
+</section>
 
-  <section>
+<section>
     <h2>Animierte Elemente</h2>
+
     <p>SVG</p>
 
-    <div class="svg animated-svg" src="img/test/tng.svg" style="margin-left: 320px; margin-top: 30px; width: 400px; height: 200px;">
-      <initial>
-        <state data-id="TNG" data-property="opacity" data-value="0"></state>
-        <state data-id="technology-consulting" data-property="opacity" data-value="0"></state>
-      </initial>
-      <animation data-duration="500">
-        <animate data-id="TNG" data-property="opacity" data-value="1"></animate>
-        <animate data-id="technology-consulting" data-property="opacity" data-value="1"></animate>
-      </animation>
-      <animation data-duration="500">
-        <animate data-id="TNG" data-property="transform" data-value="translate(-114, 63)"></animate>
-      </animation>
-      <animation data-duration="500">
-        <animate data-id="technology-consulting" data-property="transform" data-value="translate(113, -66)"></animate>
-      </animation>
+    <div class="svg animated-svg" src="img/test/tng.svg"
+         style="margin-left: 320px; margin-top: 30px; width: 400px; height: 200px;">
+        <initial>
+            <state data-id="TNG" data-property="opacity" data-value="0"></state>
+            <state data-id="technology-consulting" data-property="opacity" data-value="0"></state>
+        </initial>
+        <animation data-duration="500">
+            <animate data-id="TNG" data-property="opacity" data-value="1"></animate>
+            <animate data-id="technology-consulting" data-property="opacity" data-value="1"></animate>
+        </animation>
+        <animation data-duration="500">
+            <animate data-id="TNG" data-property="transform" data-value="translate(-114, 63)"></animate>
+        </animation>
+        <animation data-duration="500">
+            <animate data-id="technology-consulting" data-property="transform"
+                     data-value="translate(113, -66)"></animate>
+        </animation>
     </div>
-  </section>
- </section>
+</section>
+</section>
 
 <section data-title="Weitere Features">
     <section>
@@ -251,7 +224,7 @@
             <li>Zum Start der Speaker View 's' drücken</li>
             <li>Oder '?notes' an die URL anhängen <br/> (vor dem Fragment-Identifier '#')</li>
             <li>In der SpeakerView sind noch nicht angezeigte Fragmente ausgegraut</li>
-            <li>In der Upcoming-Section kann man navigieren, ohne dass <br />die Hauptansicht geändert wird</li>
+            <li>In der Upcoming-Section kann man navigieren, ohne dass <br/>die Hauptansicht geändert wird</li>
             <li>Drückt man dort Enter, springt die Präsentation zur aktuell gewählten Folie</li>
         </ul>
     </section>
@@ -268,39 +241,47 @@
 </section>
 
 <section data-title="Getting Started">
-  <section>
-    <h2>Wie erzeuge ich meine Präsentation?</h2>
-    <ol>
-      <li>Bei <a href="mailto:thomas.endres@tngtech.com">Thomas Endres</a> melden,
-          um Leserechte für das <a href="https://git.tngtech.com/reveal-template">Git-Repository</a> zu holen</li>
-      <li>Vorlage auschecken:
-          <pre><code class="bash">$ git clone gitolite@git.tngtech.com:reveal-template.git</code></pre></li>
-      <li>index.html ansehen und anpassen</li>
-      <li><b>Nicht</b> versuchen, in das Repo zurückzupushen ;-) Am besten legt Ihr Euch ein eigenes Repo für Eure Präsentation an.</li>
-    </ol>
-  </section>
+    <section>
+        <h2>Wie erzeuge ich meine Präsentation?</h2>
+        <ol>
+            <li>Bei <a href="mailto:thomas.endres@tngtech.com">Thomas Endres</a> melden,
+                um Leserechte für das <a href="https://git.tngtech.com/reveal-template">Git-Repository</a> zu holen
+            </li>
+            <li>Vorlage auschecken:
+                <pre><code class="bash">$ git clone gitolite@git.tngtech.com:reveal-template.git</code></pre>
+            </li>
+            <li>index.html ansehen und anpassen</li>
+            <li><b>Nicht</b> versuchen, in das Repo zurückzupushen ;-) Am besten legt Ihr Euch ein eigenes Repo für
+                Eure
+                Präsentation an.
+            </li>
+        </ol>
+    </section>
 </section>
 
 <section>
-  <h1>SoCraTes? Es lohnt sich definitiv hinzugehen</h1>
-  <h2>Save the Date: Next year’s SoCraTes will take place 27-30 August 2015 in Soltau.</h2>
+    <h1>SoCraTes? Es lohnt sich definitiv hinzugehen</h1>
+
+    <h2>Save the Date: Next year’s SoCraTes will take place 27-30 August 2015 in Soltau.</h2>
 </section>
 
 <!-- Danke Slide -->
 <section>
-  <h1>Vielen Dank!</h1>
-  <h2 class="fragment">Fragen?</h2>
-  <div>
-    <img style="height: 200px" src="img/test/Franziska.jpg">
-    <img style="height: 200px" src="img/test/MichaelPisula.png">
-  </div>
-  <p>
-    <a href="mailto:franziska.hinkelmann@tngtech.com">franziska.hinkelmann@tngtech.com</a><br>
-      <a href="mailto:ruben.straube@tngtech.com">ruben.straube@tngtech.com</a><br>
-    <a href="http://www.twitter.com/fhinkel">@fhinkel</a><br>
-      <a href="http://www.twitter.com/derstrauber">@derstrauber</a>
-  </p>
-  <a href="http://www.tngtech.com"><img class="logo" src="img/tng.svg"></a>
+    <h1>Vielen Dank!</h1>
+
+    <h2 class="fragment">Fragen?</h2>
+
+    <div>
+        <img style="height: 200px" src="img/test/Franziska.jpg">
+        <img style="height: 200px" src="img/test/MichaelPisula.png">
+    </div>
+    <p>
+        <a href="mailto:franziska.hinkelmann@tngtech.com">franziska.hinkelmann@tngtech.com</a><br>
+        <a href="mailto:ruben.straube@tngtech.com">ruben.straube@tngtech.com</a><br>
+        <a href="http://www.twitter.com/fhinkel">@fhinkel</a><br>
+        <a href="http://www.twitter.com/derstrauber">@derstrauber</a>
+    </p>
+    <a href="http://www.tngtech.com"><img class="logo" src="img/tng.svg"></a>
 </section>
 
 </body>
