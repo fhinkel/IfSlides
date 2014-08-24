@@ -69,7 +69,7 @@
         <ul class="no-burn">
             <li>2004-2006 Vordiplom Mathematik University Karlsruhe</li>
             <li>2006-2011 Master and PhD Mathematics Virginia Tech, USA: Algebraic Models in Systems Biology</li>
-            <li>2011-2013Postdoctoral Fellow Mathematical Biosciences Institute, Ohio State University, USA</li>
+            <li>2011-2013 Postdoctoral Fellow Mathematical Biosciences Institute, Ohio State University, USA</li>
             <li>since September 2013 Software Consultant at TNG Technology Consulting GmbH, Munich<br>
                 At work: PHP, for fun: NodeJS
             </li>
@@ -100,10 +100,7 @@
         <h2>Build a Chat Server with NodeJS</h2>
 
         <ul class="no-burn">
-            <li>JavaScript and NodeJs</li>
-            <li>Git</li>
-            <li>Test Driven Development (TDD)</li>
-            <li>npm</li>
+            <li>JavaScript and NodeJS, npm</li>
             <li>Agile development</li>
         </ul>
     </section>
@@ -112,10 +109,10 @@
         <h2>Manifesto for Agile Software Development (2001)</h2>
 
         <ul class="no-burn">
-            Individuals and interactions over processes and tools<br>
-            Working software over comprehensive documentation<br>
-            Customer collaboration over contract negotiation<br>
-            Responding to change over following a plan<br>
+            Individuals and interactions over processes and tools.<br>
+            Working software over comprehensive documentation.<br>
+            Customer collaboration over contract negotiation.<br>
+            Responding to change over following a plan.<br>
         </ul>
     </section>
 
@@ -123,11 +120,13 @@
         <h2>Agile practices and tools</h2>
 
         <ul class="no-burn">
+            <li>Git</li>
+            <li>Test Driven Development (TDD)</li>
             <li>Pair programming</li>
             <li>Code Reviews</li>
-            <li>TDD</li>
             <li>Refactoring</li>
             <li>Retrospectives</li>
+            <li>Continuous Delivery</li>
         </ul>
     </section>
 </section>
@@ -135,6 +134,26 @@
 <section data-title="First NodeJS Program">
     <section>
         <h2>Exercise: NodeJS Hello World!</h2>
+        <ul class="no-burn">
+            <li>Install node <a href="http://nodejs.org/">http://nodejs.org/</a>, to test your installation, type in a
+                terminal:
+                <pre><code class="terminal">node --version</code></pre>
+            </li>
+            <li>
+                Use any editor to write code
+            </li>
+            <li>Save the file as server.js</li>
+            <li>In a terminal or shell, in the same directory as server.js, type
+                <pre><code class="terminal">node server.js</code></pre>
+            </li>
+            <li>Check by opening <a href="http://localhost:8080">
+                http://localhost:8080</a> in your browser
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>NodeJS</h2>
         <ul class="no-burn">
             <li>Install node <a href="http://nodejs.org/">http://nodejs.org/</a>, to test your installation, type in a
                 terminal:
@@ -210,7 +229,7 @@
 
             </li>
             <li>
-                Fix the tests so that both are green!
+                Fix the tests so that both are green
             </li>
             <li>Push your changes to the remote repository</li>
         </ul>
@@ -226,27 +245,90 @@
             <li>Clone your forked repository to a new directory
                 (or delete the SimpleChatServer directory)
             </li>
-            <li>start a new branch and work on your forked repo, we will merge changes when the first feature is complete</li>
+            <li>Start a new branch and work on your forked repo, we will merge changes when the first feature is
+                complete
+            </li>
         </ul>
     </section>
 
     <section>
-        <h2>Exercises</h2>
+        <h2>Exercises: User Count</h2>
+
         <p>Let's program! And remember, test first!</p>
         <ul class="no-burn">
-            <li>The server should respond with Hello {name}!, when you open
-                <a href="http://localhost:8080/name">http://localhost:8080/name</a></li>
+            <li>Print a message to the console for every new user</li>
+            <li>Print the total number of users to the console</li>
             <!-- Accept pull request and everybody should refactor -->
+        </ul>
+    </section>
+    <section>
+        <h2>Exercises: Routing</h2>
+        <ul class="no-burn">
+            <li>Print the url that was requested to the console</li>
+            <li>Extract the pathname from the url</li>
+            <li>The server should respond with Hello {name}!, when you request
+                <a href="http://localhost:8080/name">http://localhost:8080/name</a></li>
+            <li>On
+                <a href="http://localhost:8080/admin">http://localhost:8080/admin</a>
+                the server should show a statistic about the total number of users
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Exercises: File System Access</h2>
+        <ul class="no-burn">
+            <li>Write the statistics about the number of users to a file
+            </li>
+            <li>At server startup, read in the previous number of total users
+                from the file, at the end, write the new statistics to the file
+            </li>
+            <li>Log all the names, i.e., pathnames to a file</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Exercises: Exceptions</h2>
+        <ul class="no-burn">
+            <li>Throw an exception, if the file for
+                logging the pathnames is not writable</li>
+            <li>Can you write a test for this? You should mode the file system</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Exercises: Express</h2>
+        <ul class="no-burn">
             <li>Use the express framework,
-                <a href="http://expressjs.com/">http://expressjs.com/</a></li>
-            <li>Create an input field instead of using the url for the correct greeting</li>
-            <li>Instead of a greeting, display all messages sent to the server,
-                a new message should be shown to all clients
+                <a href="http://expressjs.com/">http://expressjs.com/</a>
+                to say <br>
+                "Hello {name}!" and show statistics
+            </li>
+            <li>create an index.html that shows the greeting in blue font</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Exercises: socket.io </h2>
+        <ul class="no-burn">
+            <li>Print a message to the console for every user that disconnects (use socket.io for this)</li>
+            <li>Print the total number of active users to the console</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Exercises: chat server</h2>
+        <ul class="no-burn">
+            <li>Create a textarea that shows previous chat messages
+                and an input field for new messages</li>
+            <li>In the textarea, display all messages sent to the server,
+                a new message sent to the server should be shown to all clients
             </li>
             <li>Users should enter their nickname and
                 messages should be displayed with their name
             </li>
-            <li>Extra features: Smiley support, private rooms, logging to a file, ...</li>
+            <li>Extra features: Smiley support, private rooms,
+                logging to a file, ...</li>
 
         </ul>
     </section>
