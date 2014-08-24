@@ -153,21 +153,17 @@
     </section>
 
     <section>
-        <h2>NodeJS</h2>
+        <h2>Node.JS</h2>
         <ul class="no-burn">
-            <li>Install node <a href="http://nodejs.org/">http://nodejs.org/</a>, to test your installation, type in a
-                terminal:
-                <pre><code class="terminal">node --version</code></pre>
+            <li>server side JavaScript, high performance web server
+                by using event-driven, non-blocking library calls
             </li>
-            <li>
-                Use any editor to write code
-            </li>
-            <li>Save the file as server.js</li>
-            <li>In a terminal or shell, in the same directory as server.js, type
-                <pre><code class="terminal">node server.js</code></pre>
-            </li>
-            <li>Check by opening <a href="http://localhost:8080">
-                http://localhost:8080</a> in your browser
+            <li>callbacks: a function that is 'called back' when
+                the calling function is done:
+            <pre><code class="javascript" data-noescape>
+fileSystem.readdir("/tmp/", ^^function (err, files)
+    console.log("Files in /tmp/: " + files);
+}^^);</code></pre>
             </li>
         </ul>
     </section>
@@ -181,10 +177,31 @@
             <li>Install git
                 <a href="http://git-scm.com/downloads">http://git-scm.com/downloads</a>
             </li>
-            <li><a href="http://nyuccl.org/pages/GitTutorial/">http://nyuccl.org/pages/GitTutorial/</a>
+            <li>distributed (everybody has a local copy)</li>
+            <li>origin refers to a remote repository that everbody shares,
+                e.g., GitHub
+            </li>
+            <li>Git automatically merges changes from several people</li>
+            <li>Branches allow you to work on several versions in parallel,
+                for example for features or bug fixes
+            </li>
+            <li>Good tutorial:
+                <a href="http://nyuccl.org/pages/GitTutorial/">
+                    http://nyuccl.org/pages/GitTutorial/</a>
             </li>
         </ul>
     </section>
+
+    <section>
+        <h2>Git Cheat sheet</h2>
+        <ul class="no-burn">
+            <li><code>git status</code> or <code>git diff</code></li>
+            <li><code>git commit -a -m 'here a messages that explains your changes'</code></li>
+            <li><code>git push origin master</code></li>
+            <li><code>git pull origin master</code></li>
+        </ul>
+    </section>
+
     <section>
         <h2>Exercise: Git</h2>
 
@@ -291,7 +308,8 @@
         <h2>Exercises: Exceptions</h2>
         <ul class="no-burn">
             <li>Throw an exception, if the file for
-                logging the pathnames is not writable</li>
+                logging the pathnames is not writable
+            </li>
             <li>Can you write a test for this? You should mode the file system</li>
         </ul>
     </section>
@@ -320,7 +338,8 @@
         <h2>Exercises: chat server</h2>
         <ul class="no-burn">
             <li>Create a textarea that shows previous chat messages
-                and an input field for new messages</li>
+                and an input field for new messages
+            </li>
             <li>In the textarea, display all messages sent to the server,
                 a new message sent to the server should be shown to all clients
             </li>
@@ -328,7 +347,8 @@
                 messages should be displayed with their name
             </li>
             <li>Extra features: Smiley support, private rooms,
-                logging to a file, ...</li>
+                logging to a file, ...
+            </li>
 
         </ul>
     </section>
