@@ -1,3 +1,4 @@
+Slides running (slowly) at 'http://bit.ly/1mD8PsK'
 
 Start des HTML-Servers:  
 - Wechsel per Konsole auf das Verzeichnis  
