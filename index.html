@@ -291,12 +291,12 @@
     </section>
 
     <section>
-        <h2>Exercises 2: User Count</h2>
+        <h2>Exercises 2: Request Count</h2>
 
         <p>Let's program! And remember, test first!</p>
         <ul class="no-burn">
-            <li>Print a message to the console for every new user</li>
-            <li>Print the total number of users to the console</li>
+            <li>Print a message to the console for every new request</li>
+            <li>Print the total number of requests since server start to the console</li>
             <!-- Accept pull request and everybody should refactor -->
         </ul>
     </section>
@@ -376,21 +376,23 @@
             <li>From Japan, used in automobile industry, ~1970</li>
             <li>Write down tasks you think are necessary for the project</li>
             <li>Pull principle: you "pull" what you want to work on,
-            nobody "pushes" it on you</li>
+                nobody "pushes" it on you
+            </li>
             <li>WIP - Work in progress limited to 2 tasks</li>
             <li>Put an avatar on the task(s) that you are working on</li>
             <li>Update the board as you work or during StandUp,
-                you can also add/remove new tasks</li>
+                you can also add/remove new tasks
+            </li>
         </ul>
     </section>
 
     <section>
         <ul class="no-burn">
-            <li>Make 2 avatars (a drawing or your
-                name or initials), both should be the same</li>
+            <li>Make 2 avatars (your name works best), both avatars should be the same</li>
             <li>as a pair, pick your first task, move it to <i>work in progress</i>,
-            stick your avatars on top</li>
-            <li>if it is a knowledge task, document it on the Wiki on Github</li>
+                stick your avatars on top
+            </li>
+            <li>if it is a knowledge task, document it on the Wiki on GitHub</li>
         </ul>
     </section>
 
@@ -407,9 +409,9 @@ upstream	git@github.com:fhinkel/SimpleChatServer.git (push)</pre>
             </li>
             <li>Make sure your repository is up to date with upstream
                 <pre><code>git checkout master
-git fetch upstream
-git rebase upstream/master
-git push origin master </code></pre>
+                    git fetch upstream
+                    git rebase upstream/master
+                    git push origin master </code></pre>
             <li>Create and checkout a new branch called <i>exercise3</i>
                 <pre><code>git checkout -b exercise2</code></pre>
             </li>
@@ -426,11 +428,11 @@ git push origin master </code></pre>
         <ul class="no-burn">
             <li>Print the url that was requested to the console</li>
             <li>Extract the pathname from the url</li>
-            <li>The server should respond with Hello {name}!, when you request
+            <li>The browser should say <i>Hello {name}!</i>, when you request
                 <a href="http://localhost:8080/name">http://localhost:8080/name</a></li>
             <li>On
                 <a href="http://localhost:8080/admin">http://localhost:8080/admin</a>
-                the server should show a statistic about the total number of users
+                the browser should show a statistic about the total number of requests
             </li>
         </ul>
     </section>
@@ -458,7 +460,7 @@ git push origin master </code></pre>
     </section>
 
     <section>
-        <h2>Exercise: Express</h2>
+        <h2>Exercise 6: Express</h2>
         <ul class="no-burn">
             <li>Use the express framework,
                 <a href="http://expressjs.com/">http://expressjs.com/</a>
@@ -470,11 +472,63 @@ git push origin master </code></pre>
     </section>
 
     <section>
-        <h2>Exercises: socket.io </h2>
+        <h2>Exercises 7: socket.io </h2>
         <ul class="no-burn">
             <li>Print a message to the console for every user that disconnects (use socket.io for this)</li>
             <li>Print the total number of active users to the console</li>
         </ul>
+    </section>
+
+</section>
+<section data-title="Wednesday">
+    <section>
+        <h2>Recap from Tuesday</h2>
+        <ul class="no-burn">
+            <li>Git, git git</li>
+            <li>Express is complicated</li>
+            <li>We can detect when clients disconnect with socket.io</li>
+            <li>Yikes, asynchronous logic</li>
+            <li>How do I organize my files and modules?</li>
+            <li>Testing, mocking, stubbing: use <a href="http://sinonjs.org/">
+                Sinon</a></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>
+            Exercise: serve favicon
+        </h2>
+        Use <a href="http://expressjs.com/">express</a> to serve a favicon
+    </section>
+
+    <section>
+        <h2>Exercise: Refactor</h2>
+        How can you improve the code base? Should variables or functions
+        have different names? Should modules be reorganized? Is <i>package.json</i>
+        up to date?
+        <br>
+        How do you avoid merge conflicts with the rest of the team?
+    </section>
+
+    <section>
+        <h2>Exercise: static files</h2>
+        <ul class="no-burn">
+            <li>Most Websites have, in addition to index.html,
+                images, stylesheets, and JavaScript files,
+                which are served when requested (as opposed to
+                /admin in our example, which does not server
+                the file admin, but instead shows statistics)
+            </li>
+            <li>Use <a href="http://expressjs.com/">express</a> to
+                serve static files in /public
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Exercise: Design the website</h2>
+        Design a layout for your chat
+        server website, you can start out with pen and paper.
     </section>
 
     <section>
