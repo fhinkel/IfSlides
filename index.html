@@ -203,17 +203,6 @@
         </ul>
     </section>
 
-    <section>
-        <h2>Exercise: Git</h2>
-
-        <p>Do the following exercises on <a href="http://pcottle.github.io/learnGitBranching/">
-            http://pcottle.github.io/learnGitBranching/</a></p>
-        <ul class="no-burn">
-            <li>Select a level -> Main -> Introduction Sequence: 1-3</li>
-            <li>Ramping Up: 4</li>
-            <li>Remote -> Push and Pull: 1-7</li>
-        </ul>
-    </section>
 </section>
 
 <section data-title="Chat Server">
@@ -235,7 +224,7 @@
         </ul>
     </section>
     <section>
-        <h2>Exercise: Make tests green!</h2>
+        <h2>Exercise 1: Make tests green!</h2>
         <ul class="no-burn">
             <li>
                 Install all necessary node modules by running
@@ -255,12 +244,13 @@
 
     <section>
         <h2>Test Driven Development</h2>
+
         <p>Test-driven development is a programming technique that
-        requires <br>
+            requires <br>
             you to write actual code and automated test code
-        simultaneously.<br>
+            simultaneously.<br>
             This ensures that you test your code—and enables you
-        to retest your code quickly and easily, since it's automated.<br><br></p>
+            to retest your code quickly and easily, since it's automated.<br><br></p>
         <ul class="no-burn">
             <li>There are many testing frameworks:
                 Mocha and Jasmine are the most popular
@@ -301,7 +291,7 @@
     </section>
 
     <section>
-        <h2>Exercises: User Count</h2>
+        <h2>Exercises 2: User Count</h2>
 
         <p>Let's program! And remember, test first!</p>
         <ul class="no-burn">
@@ -310,8 +300,99 @@
             <!-- Accept pull request and everybody should refactor -->
         </ul>
     </section>
+</section>
+
+<section data-title="Tuesday">
     <section>
-        <h2>Exercises: Routing</h2>
+        <h2>Recap from Monday</h2>
+        <ul class="no-burn">
+            <li>Hello World Node.js</li>
+            <li>First tests</li>
+            <li>git basics</li>
+            <li>using an ssh key for github authentication</li>
+            <li>IntelliJ IDE</li>
+            <li>Refactoring to 'clean code'</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Why do I want to use an IDE?</h2>
+        <ul class="no-burn">
+            <li>auto completion</li>
+            <li>highlighting for syntax errors</li>
+            <li>auto formatting (code->reformat code)</li>
+            <li>git integration</li>
+            <li>very easy to see changes in git</li>
+            <li>Only in paid version: running tests and server in the same window</li>
+            <li>refactoring, even renaming of files</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Git origin and upstream</h2>
+        <ul class="no-burn">
+            <li>You can specify several remotes
+                <ul class="no-burn">
+                    <li>to see all remote:
+                        <pre><code>git remote</code></pre>
+                    </li>
+                    <li>to add a new remote that you call _name_
+                        <pre><code>git remote add _name_ _url_</code></pre>
+                        and to delete a remote
+                        <pre><code>git remote delete _name_</code></pre>
+                    </li>
+                    <li>sync your repository with changes from upstream:
+                        <pre><code>git fetch upstream</code></pre>
+                        <pre><code>git rebase upstream/master</code></pre>
+                        (rebase is like merge but adding
+                        the changes in the order they were made)
+                    </li>
+
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Exercise: Git</h2>
+
+        <p>Do the following exercises on <a href="http://pcottle.github.io/learnGitBranching/">
+            http://pcottle.github.io/learnGitBranching/</a></p>
+        <ul class="no-burn">
+            <li>Select a level -> Main -> Introduction Sequence: 1-3</li>
+            <li>Ramping Up: 4</li>
+            <li>Remote -> Push and Pull: 1-7</li>
+        </ul>
+    </section>
+    <section>
+        <ul class="no-burn">
+            <li>In the directory, where you checked out your forked
+                repository, add my repository as upstream:
+                <pre><code>git remote add upstream git@github.com:fhinkel/SimpleChatServer.git </code></pre>
+                <pre><code>git remote --verbose</code></pre>
+                <pre>origin	git@github.com:YOURUSERNAME/SimpleChatServer.git (fetch)
+origin	git@github.com:YOURUSERNAME/SimpleChatServer.git (push)
+upstream	git@github.com:fhinkel/SimpleChatServer.git (fetch)
+upstream	git@github.com:fhinkel/SimpleChatServer.git (push)</pre>
+            </li>
+            <li>Make sure your repository is up to date with upstream
+                <pre><code>git checkout master
+git fetch upstream
+git rebase upstream/master
+git push origin master </code></pre>
+            <li>Create and checkout a new branch called exercise2
+                <pre><code>git checkout -b exercise2</code></pre>
+            </li>
+            <li>push your changes to your remote repository:
+                <pre><code>git push origin exercise2</code></pre>
+                You can check on GitHub, that you have a
+                branch <i>master</i> and a branch <i>exercise2</i>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Exercise 2: Routing</h2>
         <ul class="no-burn">
             <li>Print the url that was requested to the console</li>
             <li>Extract the pathname from the url</li>
@@ -325,7 +406,7 @@
     </section>
 
     <section>
-        <h2>Exercises: File System Access</h2>
+        <h2>Exercise 3: File System Access</h2>
         <ul class="no-burn">
             <li>Write the statistics about the number of users to a file
             </li>
@@ -337,7 +418,7 @@
     </section>
 
     <section>
-        <h2>Exercises: Exceptions</h2>
+        <h2>Exercise 4: Exceptions</h2>
         <ul class="no-burn">
             <li>Throw an exception, if the file for
                 logging the pathnames is not writable
@@ -347,7 +428,7 @@
     </section>
 
     <section>
-        <h2>Exercises: Express</h2>
+        <h2>Exercise 5: Express</h2>
         <ul class="no-burn">
             <li>Use the express framework,
                 <a href="http://expressjs.com/">http://expressjs.com/</a>
