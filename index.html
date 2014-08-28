@@ -462,12 +462,17 @@ upstream	git@github.com:fhinkel/SimpleChatServer.git (push)</pre>
     </section>
 
     <section>
-        <h2>Exercise 5: Exceptions</h2>
+        <h2>Exercise 5: Error Handling in Node.js</h2>
         <ul class="no-burn">
-            <li>Throw an exception, if the file for
-                logging the pathnames is not writable
+            <li>Write a synchronous function that throws an error
+                and write a test that asserts that calling this function
+                actually throws an error</li>
+            <li>Handle errors in the functions that
+                write the statistic file (Exercise 4) by invoking the callback
+                with an error parameter.
             </li>
-            <li>Can you write a test for this? You should mock the file system</li>
+            <li>Good summary about error handlin in node can be found at
+            <a href="https://www.joyent.com/developers/node/design/errors">https://www.joyent.com/developers/node/design/errors</a></li>
         </ul>
     </section>
 
@@ -505,6 +510,34 @@ upstream	git@github.com:fhinkel/SimpleChatServer.git (push)</pre>
                 Sinon</a></li>
         </ul>
     </section>
+</section>
+
+<section data-title="Thursday">
+    <section>
+        <h2>Exceptions</h2>
+        <pre><code>function myApiFunc(callback)
+{
+    /*
+    * This pattern does NOT work!
+    */
+    try {
+        doSomeAsynchronousOperation(function (err) {
+            if (err) {
+                throw (err);
+            }
+            /* continue as normal */
+        });
+    } catch (ex) {
+        callback(ex);
+    }
+}</code></pre>
+    </section>
+
+    <!--section>
+        <h2>
+            Where are we? What do we need? Who is doing what?
+        </h2>
+    </section-->
 
     <section>
         <h2>
