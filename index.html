@@ -515,21 +515,39 @@ upstream	git@github.com:fhinkel/SimpleChatServer.git (push)</pre>
 <section data-title="Thursday">
     <section>
         <h2>Exceptions</h2>
-        <pre><code>function myApiFunc(callback)
+        <pre>
+<code class="javascript" data-noescape>function myApiFunc(callback)
 {
     /*
     * This pattern does NOT work!
     */
     try {
-        doSomeAsynchronousOperation(function (err) {
-            if (err) {
+        ^1^doSomeAsynchronousOperation^^(function (err) {
+            ^3^if (err) {
                 throw (err);
             }
-            /* continue as normal */
+            /* continue as normal */^^
         });
-    } catch (ex) {
-        callback(ex);
+    } catch (exception) {
+        callback(exception);
     }
+    ^2^/* another operation */^^
+}</code></pre>
+    </section>
+
+    <section>
+        <h2>Invoke Callback with error</h2>
+        <pre>
+<code class="javascript" data-noescape>function myApiFunc(callback)
+{
+    doSomeAsynchronousOperation(function (err) {
+        if (err) {
+            //do not throw the error
+            ^^callback(err);^^
+        }
+        /* continue as normal */
+        ^^callback(null);^^
+    });
 }</code></pre>
     </section>
 
