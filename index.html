@@ -551,6 +551,28 @@ upstream	git@github.com:fhinkel/SimpleChatServer.git (push)</pre>
 }</code></pre>
     </section>
 
+    <section>
+        <h2>package.json</h2>
+            run <code>npm install</code> to install all packages specified in <i>package.json</i>
+            <pre><code>{
+    "name": "SimpleChatServer",
+    "version": "0.0.0",
+    "main": "server.js",
+    "scripts": {
+        "test": "./node_modules/.bin/mocha tests"
+    },
+    "author": "",
+    "license": "BSD-2-Clause",
+    "dependencies": {
+        "express": "~1.0.0"
+    },
+    "devDependencies": {
+        "mocha": "~1.21.4",
+        "sinon": "~1.10.3"
+    }
+}</code></pre>
+    </section>
+
     <!--section>
         <h2>
             Where are we? What do we need? Who is doing what?
@@ -559,9 +581,22 @@ upstream	git@github.com:fhinkel/SimpleChatServer.git (push)</pre>
 
     <section>
         <h2>
-            Exercise: serve favicon
+            Exercise 8: serve favicon
         </h2>
         Use <a href="http://expressjs.com/">express</a> to serve a favicon
+        <ul class="no-burn">
+            <li>How do you serve a static file?
+                In this case, how do you serve a static image?</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Exercises 8: socket.io </h2>
+        <ul class="no-burn">
+            <li>broadcast a message for every new client to all clients</li>
+            <li>listen for clients sending you a message</li>
+            <li>broadcast that message to all clients</li>
+        </ul>
     </section>
 
     <section>
