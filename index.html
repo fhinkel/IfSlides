@@ -167,10 +167,11 @@
             </li>
             <li>callbacks: a function that is 'called back' when
                 the calling function is done:
-            <pre><code class="javascript" data-noescape>
-                fileSystem.readdir("/tmp/", ^^function (err, files)
-                console.log("Files in /tmp/: " + files);
-                }^^);</code></pre>
+                <!--@formatter:off-->
+            <pre><code class="javascript" data-noescape>fileSystem.readdir("/tmp/", ^^function (err, files)
+    console.log("Files in /tmp/: " + files);
+}^^);</code></pre>
+                <!--@formatter:on-->
             </li>
         </ul>
     </section>
@@ -420,10 +421,12 @@ upstream	git@github.com:fhinkel/SimpleChatServer.git (fetch)
 upstream	git@github.com:fhinkel/SimpleChatServer.git (push)</pre>
             </li>
             <li>Make sure your repository is up to date with upstream
+                <!-- @formatter:off -->
                 <pre><code>git checkout master
-                    git fetch upstream
-                    git rebase upstream/master
-                    git push origin master </code></pre>
+git fetch upstream
+git rebase upstream/master
+git push origin master </code></pre>
+            <!-- @formatter:off -->
             <li>Create and checkout a new branch called <i>exercise3</i>
                 <pre><code>git checkout -b exercise2</code></pre>
             </li>
@@ -466,13 +469,15 @@ upstream	git@github.com:fhinkel/SimpleChatServer.git (push)</pre>
         <ul class="no-burn">
             <li>Write a synchronous function that throws an error
                 and write a test that asserts that calling this function
-                actually throws an error</li>
+                actually throws an error
+            </li>
             <li>Handle errors in the functions that
                 write the statistic file (Exercise 4) by invoking the callback
                 with an error parameter.
             </li>
             <li>Good summary about error handlin in node can be found at
-            <a href="https://www.joyent.com/developers/node/design/errors">https://www.joyent.com/developers/node/design/errors</a></li>
+                <a href="https://www.joyent.com/developers/node/design/errors">https://www.joyent.com/developers/node/design/errors</a>
+            </li>
         </ul>
     </section>
 
@@ -516,6 +521,7 @@ upstream	git@github.com:fhinkel/SimpleChatServer.git (push)</pre>
     <section>
         <h2>Exceptions</h2>
         <pre>
+    <!--@formatter:off-->
 <code class="javascript" data-noescape>function myApiFunc(callback)
 {
     /*
@@ -533,12 +539,14 @@ upstream	git@github.com:fhinkel/SimpleChatServer.git (push)</pre>
     }
     ^2^/* another operation */^^
 }</code></pre>
+        <!--@formatter:on-->
     </section>
 
     <section>
         <h2>Invoke Callback with error</h2>
         <pre>
 <code class="javascript" data-noescape>function myApiFunc(callback)
+    <!--@formatter:off-->
 {
     doSomeAsynchronousOperation(function (err) {
         if (err) {
@@ -549,11 +557,13 @@ upstream	git@github.com:fhinkel/SimpleChatServer.git (push)</pre>
         ^^callback(null);^^
     });
 }</code></pre>
+        <!--@formatter:on-->
     </section>
 
     <section>
         <h2>package.json</h2>
-            run <code>npm install</code> to install all packages specified in <i>package.json</i>
+        run <code>npm install</code> to install all packages specified in <i>package.json</i>
+        <!--@formatter:off-->
             <pre><code>{
     "name": "SimpleChatServer",
     "version": "0.0.0",
@@ -564,13 +574,14 @@ upstream	git@github.com:fhinkel/SimpleChatServer.git (push)</pre>
     "author": "",
     "license": "BSD-2-Clause",
     "dependencies": {
-        "express": "~1.0.0"
+    "express": "~1.0.0"
     },
     "devDependencies": {
         "mocha": "~1.21.4",
         "sinon": "~1.10.3"
     }
 }</code></pre>
+        <!--@formatter:on-->
     </section>
 
     <!--section>
@@ -586,7 +597,8 @@ upstream	git@github.com:fhinkel/SimpleChatServer.git (push)</pre>
         Use <a href="http://expressjs.com/">express</a> to serve a favicon
         <ul class="no-burn">
             <li>How do you serve a static file?
-                In this case, how do you serve a static image?</li>
+                In this case, how do you serve a static image?
+            </li>
         </ul>
     </section>
 
@@ -649,19 +661,62 @@ upstream	git@github.com:fhinkel/SimpleChatServer.git (push)</pre>
     </section>
 </section>
 
+<section data-title="Conclusion">
 
-<!-- Danke Slide -->
-<section>
-    <h2><a href="http://bit.ly/1psTG1X">http://bit.ly/1psTG1X</a></h2>
+    <!-- Danke Slide -->
+    <section>
+        <h1>Thank you!</h1>
 
-    <div>
-        <img style="height: 200px" src="img/test/Franziska.png">
-    </div>
-    <p>
-        <a href="mailto:franziska.hinkelmann@tngtech.com">franziska.hinkelmann@tngtech.com</a><br>
-        <a href="http://www.twitter.com/fhinkel">@fhinkel</a><br>
-    </p>
-    <a href="http://www.tngtech.com"><img class="logo" src="img/tng.svg"></a>
+        <h2><a href="http://bit.ly/1psTG1X">http://bit.ly/1psTG1X</a></h2>
+
+        <div>
+            <img style="height: 200px" src="img/test/Franziska.png">
+        </div>
+        <p>
+            <a href="mailto:franziska.hinkelmann@tngtech.com">franziska.hinkelmann@tngtech.com</a><br>
+            <a href="http://www.twitter.com/fhinkel">@fhinkel</a><br>
+        </p>
+        <a href="http://www.tngtech.com"><img class="logo" src="img/tng.svg"></a>
+    </section>
+    <section>
+        <h2>Book Recommendations</h2>
+        <ul class="no-burn">
+            <li>
+                <a href="http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742">
+                    JavaScript: The Good Parts by Douglas Crockford </a></li>
+            <li>
+                <a href="http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882">
+                    Clean Code: A Handbook of Agile Software Craftsmanship by Robert C. Martin</a></li>
+            <li>
+                <a href="http://www.amazon.com/Art-Agile-Development-James-Shore/dp/0596527675">
+                    The Art of Agile Development by James Shore </a></li>
+            <li>
+                <a href="http://www.amazon.com/Refactoring-Improving-Design-Existing-Code/dp/0201485672">
+                    Refactoring: Improving the Design of Existing Code</a></li>
+            <li>
+                <a href="http://www.amazon.com/Refactoring-Patterns-Joshua-Kerievsky/dp/0321213351">
+                    Refactoring to Patterns by Joshua Kerievsky</a></li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Want more?</h3>
+        <ul class="no-burn">
+            <li>Fork the project on GitHub <a href="https://github.com/fhinkel/SimpleChatServer/">
+                https://github.com/fhinkel/SimpleChatServer/</a></li>
+            <li>
+                Convert slides to PDF <a href="http://bit.ly/1psTG1X?print-pdf">
+                http://bit.ly/1psTG1X?print-pdf</a>
+            </li>
+            <li>
+                Course description and timetable (1 week, Monday-Friday, 23,5 hours)
+                <a href="http://www.informatica-feminale.de/Sommer2014/lib/ajax/course.php?courseId=533">
+                    http://www.informatica-feminale.de/Sommer2014/lib/ajax/course.php?courseId=533
+                </a>
+            </li>
+        </ul>
+
+    </section>
 </section>
 
 </body>
