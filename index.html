@@ -679,25 +679,24 @@ git push origin master </code></pre>
 
         </ul>
     </section>
+
+    <section>
+        <h2>Alert user if his username was already taken</h2>
+        <h3>Do this exercise for 2 Credit Points</h3>
+        <ul class="no-burn">
+            <li>try out JS <code>alert()</code> in your fronted code</li>
+            <li>in the <code>addUniqueUserName()</code> function in our server side code, log a message whether the username is new
+                or changed
+            </li>
+            <li>emit the event <code>userNameModified</code> in case the username was not unique</li>
+            <li>in the client code, defined a listener, that listens for the <code>userNameModified</code> event (then user <code>alert()</code>
+                with an appropriate message)
+            </li>
+        </ul>
+    </section>
 </section>
 
 <section data-title="Conclusion">
-
-    <!-- Danke Slide -->
-    <section>
-        <h1>Thank you!</h1>
-
-        <h2><a href="http://bit.ly/1psTG1X">http://bit.ly/1psTG1X</a></h2>
-
-        <div>
-            <img style="height: 200px" src="img/test/Franziska.png">
-        </div>
-        <p>
-            <a href="mailto:franziska.hinkelmann@tngtech.com">franziska.hinkelmann@tngtech.com</a><br>
-            <a href="http://www.twitter.com/fhinkel">@fhinkel</a><br>
-        </p>
-        <a href="http://www.tngtech.com"><img class="logo" src="img/tng.svg"></a>
-    </section>
     <section>
         <h2>Book Recommendations</h2>
         <ul class="no-burn">
@@ -725,7 +724,8 @@ git push origin master </code></pre>
             <li>Fork the project on GitHub <a href="https://github.com/fhinkel/SimpleChatServer/">
                 https://github.com/fhinkel/SimpleChatServer/</a></li>
             <li>
-                Convert slides to PDF <a href="http://ec2-54-213-250-213.us-west-2.compute.amazonaws.com:9999/?print-pdf/#/">
+                Convert slides to PDF <a
+                    href="http://ec2-54-213-250-213.us-west-2.compute.amazonaws.com:9999/?print-pdf/#/">
                 http://ec2-54-213-250-213.us-west-2.compute.amazonaws.com:9999/?print-pdf/#/</a>
             </li>
             <li>
@@ -736,6 +736,22 @@ git push origin master </code></pre>
             </li>
         </ul>
 
+    </section>
+
+    <!-- Danke Slide -->
+    <section>
+        <h1>Thank you!</h1>
+
+        <h2><a href="http://bit.ly/1psTG1X">http://bit.ly/1psTG1X</a></h2>
+
+        <div>
+            <img style="height: 200px" src="img/test/Franziska.png">
+        </div>
+        <p>
+            <a href="mailto:franziska.hinkelmann@tngtech.com">franziska.hinkelmann@tngtech.com</a><br>
+            <a href="http://www.twitter.com/fhinkel">@fhinkel</a><br>
+        </p>
+        <a href="http://www.tngtech.com"><img class="logo" src="img/tng.svg"></a>
     </section>
 </section>
 
