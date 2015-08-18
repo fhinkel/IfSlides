@@ -317,14 +317,38 @@
 <section data-title="Tuesday">
     <section>
         <h2>Recap from Monday</h2>
-<!--        <ul class="no-burn">
+        <ul class="no-burn">
             <li>Hello World Node.js</li>
+            <li>Basics of Agile Development</li>
             <li>First tests</li>
             <li>Git basics</li>
-            <li>Using an ssh key for github authentication</li>
-            <li>IntelliJ IDE</li>
-            <li>Refactoring to <b>clean code</b></li>
-        </ul>-->
+            <li>WebStorm IDE</li>
+            <li>package.json</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Book Recommendations</h2>
+        <ul class="no-burn">
+            <li>
+                <a href="http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742">
+                    JavaScript: The Good Parts by Douglas Crockford</a></li>
+            <li>
+                <a href="http://www.amazon.com/Principles-Object-Oriented-JavaScript-Nicholas-Zakas/dp/1593275404">
+                    The Principles of Object-Oriented JavaScript by Nicholas C. Zakas</a></li>
+            <li>
+                <a href="http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882">
+                    Clean Code: A Handbook of Agile Software Craftsmanship by Robert C. Martin</a></li>
+            <li>
+                <a href="http://www.amazon.com/Art-Agile-Development-James-Shore/dp/0596527675">
+                    The Art of Agile Development by James Shore </a></li>
+            <li>
+                <a href="http://www.amazon.com/Refactoring-Improving-Design-Existing-Code/dp/0201485672">
+                    Refactoring: Improving the Design of Existing Code</a></li>
+            <li>
+                <a href="http://www.amazon.com/Refactoring-Patterns-Joshua-Kerievsky/dp/0321213351">
+                    Refactoring to Patterns by Joshua Kerievsky</a></li>
+        </ul>
     </section>
 
     <section>
@@ -341,29 +365,96 @@
     </section>
 
     <section>
-        <h2>Git origin and upstream</h2>
-        <ul class="no-burn">
-            <li>You can specify several remotes
-                <ul class="no-burn">
-                    <li>to see all remote repositories:
-                        <pre><code>git remote</code></pre>
-                    </li>
-                    <li>to add a new remote repository that you call _name_
-                        <pre><code>git remote add _name_ _url_</code></pre>
-                        and to delete a remote repository
-                        <pre><code>git remote delete _name_</code></pre>
-                    </li>
-                    <li>sync your repository with changes from upstream:
-                        <pre><code>git fetch upstream</code></pre>
-                        <pre><code>git rebase upstream/master</code></pre>
-                        (rebase is like merge but adding
-                        the changes in the order they were made)
-                    </li>
-
-                </ul>
-            </li>
-        </ul>
+        <h2>package.json</h2>
+        run <code>npm install</code> to install all packages specified in <i>package.json</i>
+        <!--@formatter:off-->
+            <pre><code>{
+    "name": "SimpleChatServer",
+    "version": "0.0.0",
+    "main": "server.js",
+    "scripts": {
+        "test": "./node_modules/.bin/mocha tests"
+    },
+    "author": "",
+    "license": "BSD-2-Clause",
+    "dependencies": {
+    "express": "~1.0.0"
+    },
+    "devDependencies": {
+        "mocha": "~1.21.4",
+        "sinon": "~1.10.3"
+    }
+}</code></pre>
+        <!--@formatter:on-->
     </section>
+
+    <section>
+        <h2>Exceptions</h2>
+        <pre>
+    <!--@formatter:off-->
+<code class="javascript" data-noescape>function myApiFunc(callback)
+{
+    /*
+    * This pattern does NOT work!
+    */
+    try {
+        ^1^doSomeAsynchronousOperation^^(function (err) {
+            ^3^if (err) {
+                throw (err);
+            }
+            /* continue as normal */^^
+        });
+    } catch (exception) {
+        callback(exception);
+    }
+    ^2^/* another operation */^^
+}</code></pre>
+        <!--@formatter:on-->
+    </section>
+
+    <section>
+        <h2>Invoke Callback with error</h2>
+        <pre>
+<code class="javascript" data-noescape>function myApiFunc(callback)
+    <!--@formatter:off-->
+{
+    doSomeAsynchronousOperation(function (err) {
+        if (err) {
+            //do not throw the error
+            ^^callback(err);^^
+        }
+        /* continue as normal */
+        ^^callback(null);^^
+    });
+}</code></pre>
+        <!--@formatter:on-->
+    </section>
+
+
+    <!--    <section>
+            <h2>Git origin and upstream</h2>
+            <ul class="no-burn">
+                <li>You can specify several remotes
+                    <ul class="no-burn">
+                        <li>to see all remote repositories:
+                            <pre><code>git remote</code></pre>
+                        </li>
+                        <li>to add a new remote repository that you call _name_
+                            <pre><code>git remote add _name_ _url_</code></pre>
+                            and to delete a remote repository
+                            <pre><code>git remote delete _name_</code></pre>
+                        </li>
+                        <li>sync your repository with changes from upstream:
+                            <pre><code>git fetch upstream</code></pre>
+                            <pre><code>git rebase upstream/master</code></pre>
+                            (rebase is like merge but adding
+                            the changes in the order they were made)
+                        </li>
+
+                    </ul>
+                </li>
+            </ul>
+        </section>-->
 
     <section>
         <h2>Exercise: Git</h2>
@@ -413,24 +504,24 @@
         </ul>
     </section>
 
-    <section>
+<!--    <section>
         <ul class="no-burn">
             <li>In the directory, where you checked out your forked
                 repository, add my repository as upstream:
                 <pre><code>git remote add upstream git@github.com:fhinkel/SimpleChatServer.git </code></pre>
-                <pre><code>git remote --verbose</code></pre>
+                <pre><code>git remote &#45;&#45;verbose</code></pre>
                 <pre>origin	git@github.com:YOURUSERNAME/SimpleChatServer.git (fetch)
 origin	git@github.com:YOURUSERNAME/SimpleChatServer.git (push)
 upstream	git@github.com:fhinkel/SimpleChatServer.git (fetch)
 upstream	git@github.com:fhinkel/SimpleChatServer.git (push)</pre>
             </li>
             <li>Make sure your repository is up to date with upstream
-                <!-- @formatter:off -->
+                &lt;!&ndash; @formatter:off &ndash;&gt;
                 <pre><code>git checkout master
 git fetch upstream
 git rebase upstream/master
 git push origin master </code></pre>
-            <!-- @formatter:off -->
+            &lt;!&ndash; @formatter:off &ndash;&gt;
             <li>Create and checkout a new branch called <i>exercise3</i>
                 <pre><code>git checkout -b exercise2</code></pre>
             </li>
@@ -440,7 +531,7 @@ git push origin master </code></pre>
                 branch <i>master</i> and a branch <i>exercise3</i>
             </li>
         </ul>
-    </section>
+    </section>-->
 
     <section>
         <h2>Exercise 3: Routing</h2>
@@ -456,8 +547,20 @@ git push origin master </code></pre>
         </ul>
     </section>
 
+        <section>
+        <h2>
+            Exercise 4: serve favicon
+        </h2>
+        Use <a href="http://expressjs.com/">express</a> to serve a favicon
+        <ul class="no-burn">
+            <li>How do you serve a static file?
+                In this case, how do you serve a static image?
+            </li>
+        </ul>
+    </section>
+
     <section>
-        <h2>Exercise 4: File System Access</h2>
+        <h2>Exercise 5: File System Access</h2>
         <ul class="no-burn">
             <li>Write the statistics about the number of users to a file
             </li>
@@ -468,7 +571,7 @@ git push origin master </code></pre>
         </ul>
     </section>
 
-    <section>
+<!--    <section>
         <h2>Exercise 5: Error Handling in Node.js</h2>
         <ul class="no-burn">
             <li>Write a synchronous function that throws an error
@@ -483,7 +586,7 @@ git push origin master </code></pre>
                 <a href="https://www.joyent.com/developers/node/design/errors">https://www.joyent.com/developers/node/design/errors</a>
             </li>
         </ul>
-    </section>
+    </section>-->
 
     <section>
         <h2>Exercise 6: Express</h2>
@@ -522,71 +625,8 @@ git push origin master </code></pre>
 </section>
 
 <section data-title="Thursday">
-    <section>
-        <h2>Exceptions</h2>
-        <pre>
-    <!--@formatter:off-->
-<code class="javascript" data-noescape>function myApiFunc(callback)
-{
-    /*
-    * This pattern does NOT work!
-    */
-    try {
-        ^1^doSomeAsynchronousOperation^^(function (err) {
-            ^3^if (err) {
-                throw (err);
-            }
-            /* continue as normal */^^
-        });
-    } catch (exception) {
-        callback(exception);
-    }
-    ^2^/* another operation */^^
-}</code></pre>
-        <!--@formatter:on-->
-    </section>
 
-    <section>
-        <h2>Invoke Callback with error</h2>
-        <pre>
-<code class="javascript" data-noescape>function myApiFunc(callback)
-    <!--@formatter:off-->
-{
-    doSomeAsynchronousOperation(function (err) {
-        if (err) {
-            //do not throw the error
-            ^^callback(err);^^
-        }
-        /* continue as normal */
-        ^^callback(null);^^
-    });
-}</code></pre>
-        <!--@formatter:on-->
-    </section>
 
-    <section>
-        <h2>package.json</h2>
-        run <code>npm install</code> to install all packages specified in <i>package.json</i>
-        <!--@formatter:off-->
-            <pre><code>{
-    "name": "SimpleChatServer",
-    "version": "0.0.0",
-    "main": "server.js",
-    "scripts": {
-        "test": "./node_modules/.bin/mocha tests"
-    },
-    "author": "",
-    "license": "BSD-2-Clause",
-    "dependencies": {
-    "express": "~1.0.0"
-    },
-    "devDependencies": {
-        "mocha": "~1.21.4",
-        "sinon": "~1.10.3"
-    }
-}</code></pre>
-        <!--@formatter:on-->
-    </section>
 
     <!--section>
         <h2>
@@ -594,17 +634,7 @@ git push origin master </code></pre>
         </h2>
     </section-->
 
-    <section>
-        <h2>
-            Exercise 8: serve favicon
-        </h2>
-        Use <a href="http://expressjs.com/">express</a> to serve a favicon
-        <ul class="no-burn">
-            <li>How do you serve a static file?
-                In this case, how do you serve a static image?
-            </li>
-        </ul>
-    </section>
+
 
     <section>
         <h2>Exercises 9: socket.io </h2>
